@@ -1,0 +1,90 @@
+ <br>
+              &nbsp &nbsp 
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-xl">
+              <b>শিক্ষেকর তালিকা</b>
+              </button>    
+              <br>
+              <br>
+
+
+                <form action="/create">
+                    {% csrf_token %}
+                    &nbsp  &nbsp
+                    <b>শিক্ষকের নাম : </b>
+                    <input class="form-control" name="name" required type="text" placeholder="name">
+                    <br>
+                    &nbsp  &nbsp
+                    <b>শিক্ষক যে বিষয়ে পাঠদান দিতে আগ্রহী:</b>
+                    <input class="form-control" name="fname" required type="text" placeholder="">
+                    <br>
+                    &nbsp  &nbsp
+                    <b>শিক্ষেকর মেবাইল নম্বর :</b>
+                    <input class="form-control" name="mname" required type="text" placeholder="">
+                    <br> 
+                    &nbsp  &nbsp
+                    <b>শিক্ষেকর ই-মেইল :    </b>
+                    <input class="form-control" name="age" required type="text" placeholder="শিক্ষেকর ই-মেইল"> 
+                    <br>
+                    <center>
+                    <input type="submit" value = "সেভ করুন" class="btn btn-success btn-lg glyphicon glyphicon-download icon-size">                            
+                    <input type="reset" value = "মুছে ফেলুন" class="btn btn-danger btn-lg glyphicon glyphicon-download icon-size">
+                    </center>
+                </form>
+
+</div>
+</div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'dashboard/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+
+
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+       
+
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col"> শিক্ষকের নাম</th>
+      <th scope="col">পাঠদানের বিষয় </th>
+      <th scope="col">শিক্ষেকর মোবাইল নম্বর</th>
+      <th scope="col">শিক্ষেকর ই-মেইল </th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+   
+    <tr>
+      <th scope="row"></th>
+   
+    
+     
+  </tbody>
+    
+</table>
+
+
+    </div>
+  </div>
+</div>
